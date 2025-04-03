@@ -9,7 +9,7 @@ endif
 if exists('g:inflow_on')
     finish
 endif
-let g:inflow_on = '1.0.0.0'
+let g:inflow_on = '1.0.0.1'
 let s:keepcpo = &cpoptions
 set cpoptions&vim
 " Plugin Guard }}}

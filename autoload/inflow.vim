@@ -1,4 +1,10 @@
 function! inflow#setlocal_formatprg() " {{{
+    " If we already have an existing formatprg defined
+    " for the file, use it instead of the generic inflow
+    if get(split(&formatprg), 0, 'inflow') != 'inflow'
+        return
+    endif
+
     let s:my_textwidth = &textwidth
 
     if s:my_textwidth <= 0
