@@ -8,7 +8,7 @@ function! inflow#setlocal_formatprg() " {{{
     let s:my_textwidth = &textwidth
 
     if s:my_textwidth <= 0
-        s:my_textwidth = get(g:, 'inflow_default_width', 80)
+        s:my_textwidth = get(g:, 'inflow_default_width', 79)
     endif
 
     " There may be a better way to set the `formatprg` value
