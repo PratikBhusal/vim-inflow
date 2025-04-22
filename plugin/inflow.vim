@@ -9,12 +9,17 @@ endif
 if exists('g:inflow_on')
     finish
 endif
-let g:inflow_on = '1.0.0.2'
+let g:inflow_on = '1.0.0.3'
 let s:keepcpo = &cpoptions
 set cpoptions&vim
 " Plugin Guard }}}
 
 function! s:setlocal_formatprg() " {{{
+    " Cannot make chances when `nomodifiable`
+    if !&modifiable
+        return
+    endif
+
     " If we already have an existing formatprg defined
     " for the file, use it instead of the generic inflow
     if get(split(&formatprg), 0, 'inflow') != 'inflow'
