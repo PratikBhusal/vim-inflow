@@ -9,7 +9,7 @@ endif
 if exists('g:inflow_on')
     finish
 endif
-let g:inflow_on = '1.0.0.3'
+let g:inflow_on = '1.1.0.0'
 let s:keepcpo = &cpoptions
 set cpoptions&vim
 " Plugin Guard }}}
@@ -29,7 +29,7 @@ function! s:setlocal_formatprg() " {{{
     let s:my_textwidth = &textwidth
 
     if s:my_textwidth <= 0
-        s:my_textwidth = get(g:, 'inflow_default_width', 80)
+        s:my_textwidth = get(g:, 'inflow_fallback_width', 80)
     endif
 
     " There may be a better way to set the `formatprg` value

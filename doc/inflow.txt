@@ -1,0 +1,33 @@
+*inflow.txt* Inflow Wrapper for Vim
+*vim-inflow*
+                   _                 _        __ _                           ~
+            __   _(_)_ __ ___       (_)_ __  / _| | _____      __            ~
+            \ \ / / | '_ ` _ \ _____| | '_ \| |_| |/ _ \ \ /\ / /            ~
+             \ V /| | | | | | |_____| | | | |  _| | (_) \ V  V /             ~
+              \_/ |_|_| |_| |_|     |_|_| |_|_| |_|\___/ \_/\_/              ~
+==============================================================================
+CONTENTS                                                     *inflow-contents*
+
+  1. Options..................................................|inflow-options|
+
+==============================================================================
+OPTIONS                                                       *inflow-options*
+
+---------------------------------------                          *g:inflow_on*
+This option shows whether or not inflow is enabled.
+If you wish to disable this plugin, do the following:
+>
+    let g:inflow_on = 0
+<
+
+---------------------------------------              *g:inflow_fallback_width*
+When no textwidth is set (ie `&textwidth == 0`),
+instead use this fallback value.
+
+Default:
+>
+    let g:inflow_fallback_width = 80
+<
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:
