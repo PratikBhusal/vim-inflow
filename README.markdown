@@ -43,6 +43,24 @@ instead use this fallback value.
 let g:inflow_fallback_width = 80
 ```
 
+### `g:inflow_use_safe_formatprg`
+Sometimes a token is longer than your textwidth. In
+which case you'll get an ugly exception instead of the
+plugin doing nothing. To avoid that, enable this setting.
+
+**Default:**
+```viml
+let g:inflow_use_safe_formatprg = 0
+```
+
+### `g:inflow_safe_formatprg_fallback_to_c_indent`
+If safe_format fails and you don't want to see any error message, enable this.
+
+**Default:**
+```viml
+let g:inflow_safe_formatprg_fallback_to_c_indent = 0
+```
+
 [Minpac]: https://github.com/k-takata/minpac
 [Pathogen]: https://github.com/tpope/vim-pathogen
 [Plug]: https://github.com/junegunn/vim-plug
